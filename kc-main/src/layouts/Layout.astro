@@ -1,0 +1,40 @@
+---
+import { BaseLayout, Header, Footer } from 'kc-astro-shared-theme';
+import 'kc-astro-shared-theme/styles/main.scss'; // Your SCSS files
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+
+// Define the navigation items for the main and social navigation
+const mainNavItems = [
+  { href: '#about', label: 'About' },
+  { href: '#web-design', label: 'Web Design' },
+  { href: '#photography', label: 'Photography' },
+  { href: '#music', label: 'Music' },
+  { href: '#contact', label: 'Contact' },
+];
+
+const socialNavItems = [
+  { href: 'https://www.linkedin.com/in/ken-chase/', label: 'LinkedIn' },
+  { href: 'https://www.instagram.com/therealkenchase/', label: 'Instagram' },
+  { href: 'https://bsky.app/profile/therealkenchase.bsky.social', label: 'Bluesky' },
+];
+
+// Destructure the site name, tag line, and copyright text
+const siteName = 'Ken Chase';
+const siteTagLine = 'Canadian web designer, photographer, and musician';
+const copyrightText = `© ${new Date().getFullYear()} Ken Chase. All rights reserved.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <Header siteName={siteName} siteTagLine={siteTagLine} navigationItems={mainNavItems} />
+
+  <main class="container">
+    <slot />
+  </main>
+
+  <Footer copyright={copyrightText} navigationItems={socialNavItems} />
+</BaseLayout>

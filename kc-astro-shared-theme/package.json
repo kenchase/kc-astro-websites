@@ -1,0 +1,36 @@
+{
+  "name": "kc-astro-shared-theme",
+  "version": "1.0.0",
+  "description": "Shared Astro theme for Ken Chase Websites",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./styles/*": "./src/styles/*"
+  },
+  "files": [
+    "src/"
+  ],
+  "peerDependencies": {
+    "astro": "^5.8.0",
+    "sass": "^1.89.1"
+  },
+  "devDependencies": {
+    "astro": "^5.8.0",
+    "sass": "^1.89.1"
+  },
+  "keywords": [
+    "astro",
+    "theme",
+    "components"
+  ],
+  "license": "MIT",
+  "author": "Ken Chase",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/kc-astro-shared-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/kc-astro-shared-theme/issues"
+  },
+  "homepage": "https://github.com/yourusername/kc-astro-shared-theme#readme"
+}

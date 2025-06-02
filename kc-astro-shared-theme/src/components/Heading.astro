@@ -1,0 +1,22 @@
+---
+import { type HTMLAttributes } from 'astro/types';
+const sizes = {
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  h6: 'h6',
+};
+interface Props extends HTMLAttributes<keyof typeof sizes> {
+  tag: keyof typeof sizes; // specifies the HTML tag to use
+  size: keyof typeof sizes; // specifies the size class
+  classes?: string; // optional classes for additional styling
+}
+const { tag, size, classes = '', ...rest } = Astro.props;
+const CustomTag = tag;
+---
+
+<CustomTag class:list={[classes, sizes[size]]} {...rest}>
+  <slot />
+</CustomTag>

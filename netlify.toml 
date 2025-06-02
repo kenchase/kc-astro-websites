@@ -1,0 +1,7 @@
+[build]
+  base = "kc-main"                 # Build from the main site folder
+  command = "npm install && npm run build"
+  publish = "kc-main/dist"         # Publish the built site
+
+[build.environment]
+  NODE_VERSION = "18"

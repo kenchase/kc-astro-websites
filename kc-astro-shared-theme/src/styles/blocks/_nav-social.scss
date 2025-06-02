@@ -1,0 +1,11 @@
+.nav-social {
+  font-family: var(--font-headings);
+}
+
+.nav-social a {
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+.nav-social a:hover {
+  color: var(--color-text-brand);
+}

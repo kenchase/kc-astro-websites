@@ -1,0 +1,39 @@
+@use '../global'; // Required to use global SASS variables
+
+.nav-primary {
+  --flow-space: var(--space-m);
+  --gutter: var(--space-m) var(--space-l);
+
+  font-family: var(--font-headings);
+  font-size: var(--size-step-3);
+  line-height: var(--leading-fine);
+}
+
+.nav-primary a {
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.nav-primary a:focus-visible {
+  outline-offset: 0.01lh;
+}
+
+.nav-primary a:hover,
+.nav-primary[aria-current='page'] {
+  color: var(--color-text-brand);
+  text-decoration: none;
+}
+
+@media screen and (width <= global.$breakpoint-large) {
+  .nav-primary__list {
+    --cluster-vertical-alignment: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media screen and (width > global.$breakpoint-large) {
+  .nav-primary__list {
+    flex-wrap: nowrap;
+    --cluster-horizontal-alignment: space-between;
+  }
+}

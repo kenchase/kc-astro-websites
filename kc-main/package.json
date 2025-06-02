@@ -1,0 +1,24 @@
+{
+  "name": "kc-main",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Main package for the Main Ken Chase Website Astro project",
+  "author": "Ken Chase",
+  "license": "MIT",
+  "keywords": [
+    "astro",
+    "theme",
+    "Ken Chase"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "kc-astro-shared-theme": "file:../kc-astro-shared-theme",
+    "astro": "^5.8.1",
+    "sass": "^1.89.1"
+  }
+}

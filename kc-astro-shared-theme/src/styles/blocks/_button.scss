@@ -1,0 +1,16 @@
+.btn {
+  display: flex;
+  --button-x-padding: 0;
+  --button-y-padding: 0.5em;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-text);
+  font-family: var(--font-headings);
+  padding: var(--button-y-padding) var(--button-x-padding);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.btn:hover {
+  border-bottom: 1px solid var(--color-text);
+  color: var(--color-text-brand);
+}

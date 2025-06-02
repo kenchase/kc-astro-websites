@@ -1,0 +1,19 @@
+.region-masthead {
+  background-color: var(--color-bg-brand);
+  color: var(--color-neutral-000);
+}
+
+.masthead {
+  --flow-space: 0.25em;
+}
+
+.masthead svg {
+  max-width: 60ch;
+  height: auto;
+}
+
+.masthead__tagline {
+  font-family: var(--font-headings);
+  font-size: var(--size-step-1);
+  font-weight: var(--font-regular);
+}

@@ -1,0 +1,15 @@
+---
+export interface Props {
+  copyright?: string;
+  customClass?: string;
+}
+
+const { copyright = `© ${new Date().getFullYear()} All rights reserved`, customClass = '' } = Astro.props;
+---
+
+<footer class={`shared-footer ${customClass}`}>
+  <div class="footer-content">
+    <p class="copyright">{copyright}</p>
+    <slot name="footer-extra" />
+  </div>
+</footer>

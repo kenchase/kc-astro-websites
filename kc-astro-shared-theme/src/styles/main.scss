@@ -1,0 +1,38 @@
+@use 'global';
+@use 'blocks';
+@use 'compositions';
+@use 'utilities';
+
+.region--lg {
+  --region-space: var(--space-xl);
+}
+
+.region--inverted {
+  background-color: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+}
+
+.region--inverted-light {
+  background-color: var(--color-bg-light);
+}
+
+.region-about,
+.region-web-design,
+.region-photography,
+.region-music,
+.region-contact {
+  scroll-margin-top: 0;
+}
+
+.region-web-design,
+.region-photography,
+.region-music {
+  scroll-margin-top: 0;
+  border-bottom: var(--stroke-solid);
+}
+
+.dotted-border {
+  background-color: #fff;
+  padding: 4px;
+  border-bottom: 2px dotted var(--color-accent);
+}
