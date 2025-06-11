@@ -1,0 +1,13 @@
+---
+import Heading from './Heading.astro';
+const { title, class: className = '', ...props } = Astro.props;
+---
+
+<div class=`flow kc-portfolio-item ${className}` {...props}>
+  <div class="grid" data-layout="50-50">
+    <Heading tag="h3" size="h3">{title}</Heading>
+    <div class="content flow prose">
+      <slot />
+    </div>
+  </div>
+</div>

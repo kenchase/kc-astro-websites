@@ -11,12 +11,12 @@ const sizes = {
 interface Props extends HTMLAttributes<keyof typeof sizes> {
   tag: keyof typeof sizes; // specifies the HTML tag to use
   size: keyof typeof sizes; // specifies the size class
-  classes?: string; // optional classes for additional styling
+  classList?: string; // optional classes for additional styling
 }
-const { tag, size, classes = '', ...rest } = Astro.props;
+const { tag, size, classList, ...rest } = Astro.props;
 const CustomTag = tag;
 ---
 
-<CustomTag class:list={[classes, sizes[size]]} {...rest}>
+<CustomTag class:list={[classList, sizes[size]]} {...rest}>
   <slot />
 </CustomTag>

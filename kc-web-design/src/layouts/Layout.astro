@@ -10,11 +10,10 @@ const { title, description } = Astro.props;
 
 // Define the navigation items for the main and social navigation
 const mainNavItems = [
-  { href: '#about', label: 'About' },
-  { href: '#web-design', label: 'Web Design' },
-  { href: '#photography', label: 'Photography' },
-  { href: '#music', label: 'Music' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/', label: 'About' },
+  { href: '/services', label: 'Web Design Services' },
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 const socialNavItems = [
@@ -25,7 +24,7 @@ const socialNavItems = [
 
 // Define the site name, tag line, and copyright text
 const siteName = 'Ken Chase';
-const siteTagLine = 'Canadian web designer, photographer, and musician';
+const siteTagLine = 'Canadian web design and development';
 const copyrightText = `© ${new Date().getFullYear()} Ken Chase. All rights reserved.`;
 ---
 

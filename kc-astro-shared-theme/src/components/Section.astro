@@ -1,0 +1,26 @@
+---
+import Heading from './Heading.astro';
+interface Props {
+  id?: string;
+  classList?: string;
+  title?: string;
+  headingTag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  headingSize?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+}
+const { id, classList, title, headingTag = 'h2', headingSize = 'h2', ...rest } = Astro.props;
+---
+
+<section id={id && id} class:list={['region', classList]} {...rest}>
+  <div class="wrapper flow">
+    {
+      title && (
+        <Heading tag={headingTag} size={headingSize}>
+          {title}
+        </Heading>
+      )
+    }
+    <div class="content flow prose">
+      <slot />
+    </div>
+  </div>
+</section>

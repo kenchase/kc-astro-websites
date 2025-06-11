@@ -3,9 +3,10 @@ declare module 'kc-astro-shared-theme' {
   export const Header: any;
   export const Footer: any;
   export const Heading: any;
-  export const IconLink: any;
   export const Link: any;
+  export const IconLink: any;
   export const Section: any;
+  export const SummaryCard: any;
   // Add any other components you currently use
 }
 

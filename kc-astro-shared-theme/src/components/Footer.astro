@@ -1,10 +1,10 @@
 ---
 export interface Props {
   copyright?: string;
-  customClass?: string;
+  classList?: string;
   navigationItems?: Array<{ href: string; text: string }>;
 }
-const { copyright = `© ${new Date().getFullYear()} All rights reserved`, navigationItems = [], customClass = '' } = Astro.props;
+const { copyright = `© ${new Date().getFullYear()} All rights reserved`, navigationItems = [], classList, ...rest } = Astro.props;
 
 const SocialNavItems = [
   { href: 'https://www.linkedin.com/in/ken-chase/', label: 'LinkedIn' },
@@ -14,7 +14,7 @@ const SocialNavItems = [
 import Link from '../components/Link.astro';
 ---
 
-<footer class={`footer ${customClass}`}>
+<footer class:list={['footer', classList]} {...rest}>
   <div class="region region--inverted region--lg region-footer">
     <div class="wrapper repel">
       <p>{copyright}</p>

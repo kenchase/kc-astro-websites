@@ -29,11 +29,13 @@ body {
 
 h1 {
   font-size: var(--size-step-7);
+  line-height: var(--leading-micro);
   max-width: 20ch;
 }
 
 h2 {
   font-size: var(--size-step-6);
+  line-height: var(--leading-micro);
   max-width: 35ch;
 }
 

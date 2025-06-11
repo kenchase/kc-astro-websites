@@ -1,0 +1,38 @@
+---
+import { Section, SummaryCard, IconLink } from 'kc-astro-shared-theme';
+import Layout from '../layouts/Layout.astro';
+import '../styles/custom.css';
+// Import client list data
+import clientList from '../data/client-list.json';
+// Importing the portfolioPosts collection from Astro's content system
+import { getCollection } from 'astro:content';
+// Importing the portfolioPosts collection and sorting it by title
+const portfolioPosts = (await getCollection('portfolioPosts')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+
+<Layout title="Ken Chase - Canadian web designer, photographer, and musician">
+  <Section id="portfolio" classList="kc-region--lg kc-region--inverted-light" title="About my Portfolio">
+    <p>The following is a sampling of some of the work I've been involved with. Keep in mind that it takes a team to successfully build products. Collaboration is key.</p>
+  </Section>
+
+  <Section id="partial-client-list" classList="kc-region--lg" title="Partial Client List">
+    <p>Here is a partial list of clients I've worked with over the years:</p>
+    <ul class="column-list-2">
+      {clientList.map((client) => <li> {client.name}</li>)}
+    </ul>
+  </Section>
+
+  <Section id="web-design-portfolio" classList="kc-region--lg" title="Select Portfolio Projects">
+    <p>A small sampling of some projects I've worked on.</p>
+    <div class="flow kc-portfolio-items">
+      {
+        portfolioPosts.map((post) => (
+          <SummaryCard title={post.data.title}>
+            <p>{post.data.description}</p>
+            <IconLink href={`/portfolio/${post.id}`}>{post.data.linkLabel}</IconLink>
+          </SummaryCard>
+        ))
+      }
+    </div>
+  </Section>
+</Layout>

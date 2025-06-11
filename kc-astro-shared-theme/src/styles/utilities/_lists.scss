@@ -1,0 +1,6 @@
+@use '../global'; // Required to use global SASS variables
+@media screen and (width > global.$breakpoint-large) {
+  .column-list-2 {
+    columns: 2; /* number of columns */
+  }
+}
