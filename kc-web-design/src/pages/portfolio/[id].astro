@@ -1,0 +1,50 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { Section, SummaryCard, IconLink } from 'kc-astro-shared-theme';
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/custom.css';
+// Importing the portfolioPosts collection and sorting it by title
+const portfolioPosts = (await getCollection('portfolioPosts')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const posts = await getCollection('portfolioPosts');
+
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+interface Props {
+  post: CollectionEntry<'portfolioPosts'>;
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+// Filter out the current post from the portfolio list
+const otherPortfolioPosts = portfolioPosts.filter((p) => p.id !== post.id);
+---
+
+<Layout title=`Ken Chase Web Design Portfolio: ${post.data.title}` description={post.data.description}>
+  <Section id="portfolio-intro" classList="kc-region--lg kc-region--inverted-light" title={post.data.title} headingTag="h1" headingSize="h1">
+    <p>{post.data.description}</p>
+  </Section>
+  <Section id="portfolio-content" classList="kc-region--lg">
+    <Content />
+  </Section>
+
+  <Section id="web-design-portfolio" classList="kc-region--lg kc-region--inverted-light" title="More Portfolio Projects">
+    <div class="flow kc-portfolio-items">
+      {
+        otherPortfolioPosts.map((portfolioPost) => (
+          <SummaryCard title={portfolioPost.data.title}>
+            <p>{portfolioPost.data.description}</p>
+            <IconLink href={`/portfolio/${portfolioPost.id}`} aria-label={`${portfolioPost.data.title} portfolio project`}>
+              {portfolioPost.data.linkLabel}
+            </IconLink>
+          </SummaryCard>
+        ))
+      }
+    </div>
+  </Section>
+</Layout>

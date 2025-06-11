@@ -1,46 +1,37 @@
 ---
 import { Section, Heading } from 'kc-astro-shared-theme';
+import { IconLink } from 'kc-astro-shared-theme';
 import Layout from '../layouts/Layout.astro';
 import '../styles/custom.css';
 ---
 
-<Layout title="Ken Chase - Canadian web designer, photographer, and musician">
+<Layout title="Ken Chase - Canadian Web Designer and WordPress Developer" description="Web design and WordPress development services in Ottawa, Ontario. Ken Chase creates accessible, user-friendly websites for government, non-profit, and business clients across Canada.">
   <Section id="about" classList="region--lg region--inverted-light region-about">
+    <Heading tag="h1" size="h2">About Ken Chase Web Design</Heading>
+    <div class="content flow prose">
+      <p>I'm a Canadian web designer with over 15 years of experience who specializes in custom WordPress development. I help organizations create websites that work beautifully while being easy to manage.</p>
+      <p>Whether you're a government agency, non-profit, or corporation, I handle everything from initial design through launch and training—so you work with one expert instead of juggling multiple vendors.</p>
+    </div>
+  </Section>
+
+  <Section id="web-design-services" classList="region region--lg region-web-design">
     <div class="grid" data-layout="50-50">
-      <Heading tag="h2" size="h2">About</Heading>
+      <Heading tag="h2" size="h2">Services</Heading>
       <div class="content flow prose">
-        <p>I'm a Canadian web designer, creative photographer, and musician based in Ottawa, Ontario. I'm fluent in both English and French. I once ran away to spend a couple of years in the Caribbean.</p>
-        <p>I'm someone who thinks the best adventures happen on foot while the best ideas come from slowing down and paying attention.</p>
-        <p>I'm both a night owl and a morning person—a contradiction that I somehow make work. Naps happens!</p>
+        <p>I provide end-to-end web design and development services, including custom WordPress solutions, that transform how organizations connect with their audiences.</p>
+        <p>I provide friendly guidance from initial concepts through launch and beyond.</p>
+        <IconLink href="/services">View Services</IconLink>
       </div>
     </div>
   </Section>
 
-  <section id="web-design-services" class="region region--lg region-web-design">
-    <div class="wrapper">
-      <div class="grid" data-layout="50-50">
-        <Heading tag="h2" size="h2">Services</Heading>
-        <div class="content flow prose">
-          <p>I help people grow their ideas and businesses by creating well-crafted websites that are beautiful, useable, and accessible.</p>
-          <p>I'm someone who can take a project from initial concept all the way through launch. I can also collaborate seamlessly with existing teams: I know how to fit in.</p>
-          <p>My design philosophy is simple: I craft high quality, user-centred experiences that gets results.</p>
-          <a href="https://www.linkedin.com/in/ken-chase/" class="btn btn--link repel"><span>Let's get started</span><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M16.172 13H4v-2h12.172l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13Z"></path></svg></a>
-        </div>
+  <Section id="web-design-portfolio" classList="region region--lg region-web-design-portfolio">
+    <div class="grid" data-layout="50-50">
+      <Heading tag="h2" size="h2">Portfolio</Heading>
+      <div class="content flow prose">
+        <p>From modernizing government services that serve thousands to helping growing businesses find their digital voice, I've partnered with diverse organizations to create meaningful change through thoughtful design.</p>
+        <IconLink href="/portfolio">View Portfolio</IconLink>
       </div>
     </div>
-  </section>
-
-  <section id="web-design-portfolio" class="region region--lg region-web-design-portfolio">
-    <div class="wrapper">
-      <div class="grid" data-layout="50-50">
-        <Heading tag="h2" size="h2">Portfolio</Heading>
-        <div class="content flow prose">
-          <p>I turn overheard conversations into songs—those random snippets of life that catch my ear while walking around the city, sitting in cafes, restaurants, and bars.</p>
-          <p>My music ranges from experimental electronic sounds to bedroom rock, but I like to think of it all as <span class="dotted-border">apartment songs</span></p>
-          <p>I write, record, and produce from my home studio. Surrounded by the instruments I adore.</p>
-          <a href="https://soundcloud.com/therealkenchase/" class="btn btn--link repel"><span>Sample my music</span><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M16.172 13H4v-2h12.172l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13Z"></path></svg></a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </Section>
 </Layout>

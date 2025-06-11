@@ -1,5 +1,5 @@
 ---
-import { Section, SummaryCard, IconLink } from 'kc-astro-shared-theme';
+import { Section, Heading, SummaryCard, IconLink } from 'kc-astro-shared-theme';
 import Layout from '../layouts/Layout.astro';
 import '../styles/custom.css';
 // Import client list data
@@ -10,26 +10,29 @@ import { getCollection } from 'astro:content';
 const portfolioPosts = (await getCollection('portfolioPosts')).sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
-<Layout title="Ken Chase - Canadian web designer, photographer, and musician">
-  <Section id="portfolio" classList="kc-region--lg kc-region--inverted-light" title="About my Portfolio">
-    <p>The following is a sampling of some of the work I've been involved with. Keep in mind that it takes a team to successfully build products. Collaboration is key.</p>
+<Layout title="Ken Chase - Web Design and Development Portfolio" description="Ken Chase - Canadian web designer and WordPress developer portfolio. View projects including government accessibility redesigns, bilingual websites, and custom WordPress solutions for organizations across Canada.">
+  <Section id="portfolio" classList="kc-region--lg kc-region--inverted-light">
+    <Heading tag="h1" size="h2">About my Portfolio</Heading>
+    <p>Here's a selection of work that demonstrates the power of collaboration in action. While I'm proud of my contributions to these projects, each one succeeded because of the talented teams behind them. Great products happen when designers, developers, stakeholders, and users work together toward a common vision.</p>
   </Section>
 
   <Section id="partial-client-list" classList="kc-region--lg" title="Partial Client List">
-    <p>Here is a partial list of clients I've worked with over the years:</p>
+    <p>I've had the privilege of working with organizations across government, non-profit, and private sectors. Here's a partial list of clients who have trusted me with their digital projects.</p>
     <ul class="column-list-2">
       {clientList.map((client) => <li> {client.name}</li>)}
     </ul>
   </Section>
 
   <Section id="web-design-portfolio" classList="kc-region--lg" title="Select Portfolio Projects">
-    <p>A small sampling of some projects I've worked on.</p>
+    <p>These projects showcase my approach to solving real business challenges through thoughtful design and and development. Take a look at the work below to see how I've helped clients across different sectors achieve their goals.</p>
     <div class="flow kc-portfolio-items">
       {
         portfolioPosts.map((post) => (
           <SummaryCard title={post.data.title}>
             <p>{post.data.description}</p>
-            <IconLink href={`/portfolio/${post.id}`}>{post.data.linkLabel}</IconLink>
+            <IconLink href={`/portfolio/${post.id}`} aria-label={`${post.data.title} portfolio project`}>
+              {post.data.linkLabel}
+            </IconLink>
           </SummaryCard>
         ))
       }

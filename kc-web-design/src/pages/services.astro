@@ -9,81 +9,59 @@ import { getCollection } from 'astro:content';
 const portfolioPosts = await getCollection('portfolioPosts');
 ---
 
-<Layout title="Ken Chase - Canadian web designer, photographer, and musician">
-  <Section id="portfolio" classList="kc-region--lg kc-region--inverted-light" title="Services">
-    <p>The following is a sampling of some of the work I've been involved with. Keep in mind that it takes a team to successfully build products. Collaboration is key.</p>
+<Layout title="Ken Chase - Web Design and Development Services" description="Professional web design and WordPress development services in Ottawa. Custom websites, design systems, and ongoing support for government, non-profit, and business clients across Canada.">
+  <Section classList="kc-region--lg kc-region--inverted-light">
+    <Heading tag="h1" size="h2">Web Design and Development Services</Heading>
+    <p>I specialize in creating websites that feel authentic to your mission and effortless for your users, combining thoughtful design with well-crafted development. From our first brainstorming session to long after your site goes live, I'm your dedicated partner in making your digital presence truly shine.</p>
+  </Section>
+
+  <Section classList="kc-region--lg">
+    <div class="grid" data-layout="50-50">
+      <Heading tag="h2" size="h2">Web Design</Heading>
+      <div class="content flow prose">
+        <p>Every organization has a unique story to tell, and your website should reflect that. I craft custom designs that capture your brand's personality while prioritizing user experience and accessibility.</p>
+        <p>Through collaborative discovery sessions and iterative design processes, we'll create a digital presence that feels authentically yours and connects meaningfully with your audience.</p>
+        <p>Whether you need a complete redesign or a fresh new site, I handle everything from initial concepts through launch and training. My goal is to make the process as seamless as possible for you, so you can focus on what you do best.</p>
+        <IconLink href="mailto:hello@kenchase.com?subject=Ken Chase web design services">Contact me about web design</IconLink>
+      </div>
+    </div>
+  </Section>
+  <Section classList="kc-region--lg">
+    <div class="grid" data-layout="50-50">
+      <Heading tag="h2" size="h2">WordPress Development</Heading>
+      <div class="content flow prose">
+        <p>I build tailored WordPress solutions that fit your exact needs—from custom themes and plugins to complex functionality that makes your site work exactly how you envision it.</p>
+        <p>I also work with modern frameworks like Astro for lightning-fast, content-focused sites.</p>
+        <p>Whether you need advanced search features, custom post types, or seamless integrations, I create clean, maintainable code that grows with your organization.</p>
+        <IconLink href="mailto:hello@kenchase.com?subject=Ken Chase WordPress services">Contact me about WordPress</IconLink>
+      </div>
+    </div>
+  </Section>
+  <Section classList="kc-region--lg">
+    <div class="grid" data-layout="50-50">
+      <Heading tag="h2" size="h2">Figma Design Systems</Heading>
+      <div class="content flow prose">
+        <p>Consistency builds trust, and design systems build consistency. I develop comprehensive design systems that ensure your brand looks and feels cohesive across all touchpoints.</p>
+        <p>From color palettes and typography to component libraries in Figma, I create scalable design foundations that streamline future projects and empower your team to maintain brand integrity.</p>
+        <IconLink href="mailto:hello@kenchase.com?subject=Ken Chase design systems">Contact me about design systems</IconLink>
+      </div>
+    </div>
+  </Section>
+  <Section classList="kc-region--lg">
+    <div class="grid" data-layout="50-50">
+      <Heading tag="h2" size="h2">Website Support and Maintenance</Heading>
+      <div class="content flow prose">
+        <p>Your website is an investment that deserves ongoing care. I provide reliable maintenance services that keep your site secure, updated, and performing at its best.</p>
+        <p>From regular backups and security monitoring to content updates and feature enhancements, I'm here to ensure your digital presence continues to serve you well long after launch.</p>
+        <IconLink href="mailto:hello@kenchase.com?subject=Ken Chase web maintenance">Contact me for web maintenance</IconLink>
+      </div>
+    </div>
   </Section>
 
   <Section id="client-list" classList="kc-region--lg" title="Partial Client List">
-    <p>Here is a partial list of clients I've worked with over the years:</p>
+    <p>My clients include:</p>
     <ul class="column-list-2">
       {clientList.map((client) => <li> {client.name}</li>)}
     </ul>
-  </Section>
-
-  <Section id="web-design-portfolio" classList="region" title="Select Portfolio Projects">
-    <p>I turn overheard conversations into songs—those random snippets of life that catch my ear while walking around the city, sitting in cafes, restaurants, and bars.</p>
-    <div class="flow kc-portfolio-items">
-      <h2>Items</h2>
-      {
-            portfolioPosts.map((project) => (
-          <Heading tag="h3" size="h3">
-            {project.data.title}
-          </Heading>
-          <p>Test</p>
-        ))
-      }
-      <!-- Algonquin College -->
-      <div class="flow kc-portfolio-item">
-        <div class="grid" data-layout="50-50">
-          <Heading tag="h3" size="h3">Algonquin College</Heading>
-          <div class="content flow prose">
-            <p>In 2024, I was part of a team that designed and built the Algonquin College Design System. This system is used by the college to ensure consistency and accessibility across all their digital products.</p>
-            <p>My role included designing components, creating documentation, and ensuring that the system met accessibility standards.</p>
-            <IconLink href="/portfolio/algonquin-college-design-system">View Project Details</IconLink>
-          </div>
-        </div>
-      </div>
-      <!-- Agilus Work Solutions -->
-      <div class="flow kc-portfolio-item">
-        <div class="grid" data-layout="50-50">
-          <Heading tag="h3" size="h3">Agilus Work Solutions</Heading>
-          <div class="content flow prose">
-            <p>In 2025, I was part of a team that designed and built the Algonquin College Design System. This system is used by the college to ensure consistency and accessibility across all their digital products.</p>
-            <IconLink href="/portfolio/agilus-work-solutions">View Project Details</IconLink>
-          </div>
-        </div>
-      </div>
-      <!-- Natural Resources Canada -->
-      <div class="flow kc-portfolio-item">
-        <div class="grid" data-layout="50-50">
-          <Heading tag="h3" size="h3">Natural Resources Canada</Heading>
-          <div class="content flow prose">
-            <p>In 2025, I was part of a team that designed and built the Algonquin College Design System. This system is used by the college to ensure consistency and accessibility across all their digital products.</p>
-            <IconLink href="/portfolio/nrcan">View Project Details</IconLink>
-          </div>
-        </div>
-      </div>
-      <!-- Health Canada -->
-      <div class="flow kc-portfolio-item">
-        <div class="grid" data-layout="50-50">
-          <Heading tag="h3" size="h3">Health Canada</Heading>
-          <div class="content flow prose">
-            <p>In 2025, I was part of a team that designed and built the Algonquin College Design System. This system is used by the college to ensure consistency and accessibility across all their digital products.</p>
-            <IconLink href="portfolio/health-canada">View Project Details</IconLink>
-          </div>
-        </div>
-      </div>
-      <!-- Health Canada -->
-      <div class="flow kc-portfolio-item">
-        <div class="grid" data-layout="50-50">
-          <Heading tag="h3" size="h3">Canadian Cerebral Palsy Sports Association (CCPSA)</Heading>
-          <div class="content flow prose">
-            <p>In 2025, I was part of a team that designed and built the Algonquin College Design System. This system is used by the college to ensure consistency and accessibility across all their digital products.</p>
-            <IconLink href="/portfolio/ccpsa">View Project Details</IconLink>
-          </div>
-        </div>
-      </div>
-    </div>
   </Section>
 </Layout>

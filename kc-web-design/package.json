@@ -17,8 +17,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "kc-astro-shared-theme": "file:../kc-astro-shared-theme",
+    "@astrojs/mdx": "^4.3.0",
     "astro": "^5.8.1",
+    "kc-astro-shared-theme": "file:../kc-astro-shared-theme",
     "sass": "^1.89.1"
   }
 }
