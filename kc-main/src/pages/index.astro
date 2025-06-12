@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Heading } from 'kc-astro-shared-theme';
+import { Heading, IconLink } from 'kc-astro-shared-theme';
 import '../styles/custom.css';
 ---
 
@@ -8,7 +8,7 @@ import '../styles/custom.css';
   <section id="about" class="region region--lg region--inverted-light region-about">
     <div class="wrapper">
       <div class="grid" data-layout="50-50">
-        <Heading tag="h2" size="h2">About</Heading>
+        <Heading tag="h1" size="h2">About <span class="visually-hidden">Ken Chase</span></Heading>
         <div class="content flow prose">
           <p>I'm a Canadian web designer, creative photographer, and musician based in Ottawa, Ontario. I'm fluent in both English and French. I once ran away to spend a couple of years in the Caribbean.</p>
           <p>I'm someone who thinks the best adventures happen on foot while the best ideas come from slowing down and paying attention.</p>
@@ -26,7 +26,7 @@ import '../styles/custom.css';
           <p>I help people grow their ideas and businesses by creating well-crafted websites that are beautiful, useable, and accessible.</p>
           <p>I'm someone who can take a project from initial concept all the way through launch. I can also collaborate seamlessly with existing teams: I know how to fit in.</p>
           <p>My design philosophy is simple: I craft high quality, user-centred experiences that gets results.</p>
-          <a href="https://www.linkedin.com/in/ken-chase/" class="btn btn--link repel"><span>Visit my LinkedIn profile</span><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M16.172 13H4v-2h12.172l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13Z"></path></svg></a>
+          <IconLink href="https://web.kenchase.com/" class="btn btn--link repel" target="_blank">Visit my portfolio site</IconLink>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@ import '../styles/custom.css';
           <p>I strive to create cinematic street photography that captures how I view the world. My work was initially heavily influenced by film noir, but over time it's taking on a life of its own. I've also embraced colour.</p>
           <p>Walking gives me the time to see what others sometimes miss—the atmosphere, the mood, the textures, the unfolding stories. There's a lot to see out there when you choose to look.</p>
           <p>My photos are little love letters to the cities I walk.</p>
-          <a href="https://www.instagram.com/therealkenchase/" class="btn btn--link repel"><span>Explore my photography</span><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M16.172 13H4v-2h12.172l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13Z"></path></svg></a>
+          <IconLink href="https://www.instagram.com/therealkenchase/" class="btn btn--link repel" target="_blank">Explore my photography</IconLink>
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@ import '../styles/custom.css';
           <p>I turn overheard conversations into songs—those random snippets of life that catch my ear while walking around the city, sitting in cafes, restaurants, and bars.</p>
           <p>My music ranges from experimental electronic sounds to bedroom rock, but I like to think of it all as <span class="dotted-border">apartment songs</span></p>
           <p>I write, record, and produce from my home studio surrounded by the instruments I adore.</p>
-          <a href="https://soundcloud.com/therealkenchase/" class="btn btn--link repel"><span>Sample my music</span><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M16.172 13H4v-2h12.172l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13Z"></path></svg></a>
+          <IconLink href="https://soundcloud.com/therealkenchase/" class="btn btn--link repel" target="_blank">Hear my music</IconLink>
         </div>
       </div>
     </div>
