@@ -1,0 +1,10 @@
+[build]
+  base = "kc-main"
+  command = "npm ci && npm run build"
+  publish = "kc-main/dist"
+
+[[redirects]]
+  from = "https://kenchase.netlify.app/*"
+  to = "https://kenchase.com/:splat"
+  status = 301
+  force = true

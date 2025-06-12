@@ -1,7 +1,0 @@
-[build]
-  base = "kc-main"
-  command = "npm ci && npm run build"
-  publish = "kc-main/dist"
-
-[build.environment]
-  NODE_VERSION = "20"
