@@ -3,10 +3,10 @@
 export interface Props {
   title: string;
   description?: string;
-  customClass?: string;
+  classList?: string;
   gtmId?: string;
 }
-const { title, description = '', customClass = '', gtmId = 'GTM-WS42R2C' } = Astro.props;
+const { title, description = '', classList = '', gtmId = 'GTM-WS42R2C' } = Astro.props;
 ---
 
 <html lang="en">
@@ -33,7 +33,7 @@ const { title, description = '', customClass = '', gtmId = 'GTM-WS42R2C' } = Ast
     <meta name="description" content={description} />
     <title>{title}</title>
   </head>
-  <body class={customClass}>
+  <body class:list={['header', classList]}>
       <!-- Google Tag Manager (noscript) -->
       {gtmId && (
         <noscript>
