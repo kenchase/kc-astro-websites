@@ -31,9 +31,7 @@ const { siteName = 'Ken Chase', siteTagLine = 'Canadian web designer, photograph
             // Map through the main navigation items and create links (implicit return)
             navigationItems.map((item) => (
               <li>
-                <Link href={item.href} classList="nav-primary__link">
-                  {item.label}
-                </Link>
+                <Link href={item.href}>{item.label}</Link>
               </li>
             ))
           }
