@@ -1,6 +1,7 @@
 [build]
+  base = "kc-main"
   command = "npm ci && npm run build"
-  publish = "kc-main/dist"
+  publish = "dist"
 
 [[redirects]]
   from = "https://kenchase.netlify.app/*"

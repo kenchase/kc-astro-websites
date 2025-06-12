@@ -1,6 +1,7 @@
 [build]
+  base = "kc-web-design"
   command = "npm ci && npm run build"
-  publish = "kc-web-design/dist"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22"
