@@ -24,7 +24,7 @@ import Link from '../components/Link.astro';
             // Map through the social navigation items and create links (implicit return)
             SocialNavItems.map((item) => (
               <li>
-                <Link href={item.href} class="nav-social__link" target="_blank" rel="noopener noreferrer">
+                <Link href={item.href} target="_blank" rel="noopener noreferrer">
                   {item.label}
                 </Link>
               </li>
