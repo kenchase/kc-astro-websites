@@ -1,5 +1,4 @@
 [build]
-base = "kc-web-design"
   command = "npm ci && npm run build"
   publish = "kc-web-design/dist"
 
