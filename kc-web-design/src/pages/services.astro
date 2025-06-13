@@ -1,12 +1,8 @@
 ---
 import { Section, Heading, IconLink } from 'kc-astro-shared-theme';
-import Layout from '../layouts/Layout.astro';
-import '../styles/custom.css';
+import Layout from '@layouts/Layout.astro';
 // Import client list data
 import clientList from '../data/client-list.json';
-// Get Content Collection
-import { getCollection } from 'astro:content';
-const portfolioPosts = await getCollection('portfolioPosts');
 ---
 
 <Layout title="Ken Chase - Web Design and Development Services" description="Professional web design and WordPress development services in Ottawa. Custom websites, design systems, and ongoing support for government, non-profit, and business clients across Canada.">

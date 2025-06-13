@@ -5,8 +5,9 @@ export interface Props {
   description?: string;
   classList?: string;
   gtmId?: string;
+  typescriptId?: string;
 }
-const { title, description = '', classList = '', gtmId = 'GTM-WS42R2C' } = Astro.props;
+const { title, description, classList, gtmId, typescriptId} = Astro.props;
 ---
 
 <html lang="en">
@@ -27,10 +28,14 @@ const { title, description = '', classList = '', gtmId = 'GTM-WS42R2C' } = Astro
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="https://use.typekit.net/rmb0ahl.css" />
+    {typescriptId && (
+      <link rel="stylesheet" href=`https://use.typekit.net/${typescriptId}.css` />
+    )}
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
+    {description && (
+      <meta name="description" content={description} />
+    )}
     <title>{title}</title>
   </head>
   <body class:list={['header', classList]}>

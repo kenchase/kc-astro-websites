@@ -1,8 +1,8 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import { Section, SummaryCard, IconLink } from 'kc-astro-shared-theme';
-import Layout from '../../layouts/Layout.astro';
-import '../../styles/custom.css';
+import Layout from '@layouts/Layout.astro';
+
 // Importing the portfolioPosts collection and sorting it by title
 const portfolioPosts = (await getCollection('portfolioPosts')).sort((a, b) => a.data.title.localeCompare(b.data.title));
 // 1. Generate a new path for every collection entry
