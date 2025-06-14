@@ -27,22 +27,19 @@ body {
   text-wrap: balance;
 }
 
-h1,
-.h1 {
+:is(h1, .h1) {
   font-size: var(--size-step-7);
   line-height: var(--leading-micro);
   max-width: 20ch;
 }
 
-h2,
-.h2 {
+:is(h2, .h2) {
   font-size: var(--size-step-6);
   line-height: var(--leading-micro);
   max-width: 35ch;
 }
 
-h3,
-.h3 {
+:is(h3, .h3) {
   font-size: var(--size-step-4);
   max-width: 35ch;
 }

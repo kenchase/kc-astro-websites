@@ -30,6 +30,7 @@ const { title, description, classList, gtmId, typescriptId} = Astro.props;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     {typescriptId && (
+      <link rel="preload" href=`https://use.typekit.net/${typescriptId}.css` />
       <link rel="stylesheet" href=`https://use.typekit.net/${typescriptId}.css` />
     )}
     <meta name="viewport" content="width=device-width" />
