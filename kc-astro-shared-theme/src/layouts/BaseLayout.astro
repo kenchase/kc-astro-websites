@@ -36,6 +36,9 @@ const { title, description, classList, gtmId, typescriptId} = Astro.props;
     )}
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    {title && (
+      <meta name="title" content={title} />
+    )}
     {description && (
       <meta name="description" content={description} />
     )}
