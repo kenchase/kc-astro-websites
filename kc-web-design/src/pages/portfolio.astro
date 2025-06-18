@@ -9,7 +9,7 @@ import { getCollection } from 'astro:content';
 const portfolioPosts = (await getCollection('portfolioPosts')).sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
-<Layout title="Ken Chase - Web Design and Development Portfolio" description="Ken Chase designs and builds digital products that are elegant, accessible, and easy to manage for government and nonprofits.">
+<Layout title="Ken Chase - Web Design and Development Portfolio" description="Ken Chase designs and builds digital products that are elegant, accessible, and easy to manage for government and non-profits.">
   <Section id="portfolio" classList="kc-region--lg kc-region--inverted-light">
     <Heading tag="h1" size="h2">About my Portfolio</Heading>
     <p>Here's a selection of work that demonstrates the power of collaboration in action. While I'm proud of my contributions to these projects, each one succeeded because of the talented teams behind them. Great products happen when designers, developers, stakeholders, and users work together toward a common vision.</p>
@@ -29,7 +29,7 @@ const portfolioPosts = (await getCollection('portfolioPosts')).sort((a, b) => a.
         portfolioPosts.map((post) => (
           <SummaryCard title={post.data.title}>
             <p>{post.data.description}</p>
-            <IconLink href={`/portfolio/${post.id}`} aria-label={`${post.data.title} portfolio project`}>
+            <IconLink href={`/portfolio/${post.id}/`} aria-label={`${post.data.title} portfolio project`}>
               {post.data.linkLabel}
             </IconLink>
           </SummaryCard>

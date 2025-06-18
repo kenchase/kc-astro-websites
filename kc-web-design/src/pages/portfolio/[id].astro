@@ -39,7 +39,7 @@ const otherPortfolioPosts = portfolioPosts.filter((p) => p.id !== post.id);
         otherPortfolioPosts.map((portfolioPost) => (
           <SummaryCard title={portfolioPost.data.title}>
             <p>{portfolioPost.data.description}</p>
-            <IconLink href={`/portfolio/${portfolioPost.id}`} aria-label={`${portfolioPost.data.title} portfolio project`}>
+            <IconLink href={`/portfolio/${portfolioPost.id}/`} aria-label={`${portfolioPost.data.title} portfolio project`}>
               {portfolioPost.data.linkLabel}
             </IconLink>
           </SummaryCard>
