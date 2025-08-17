@@ -1,14 +1,14 @@
 [
-  { "name": "Agilus Work Solutions", "href": "" },
-  { "name": "Algonquin College", "href": "" },
-  { "name": "Canadian Cerebral Palsy Sports Association", "href": "" },
-  { "name": "Canadian Museum of History", "href": "" },
-  { "name": "Health Canada", "href": "" },
+  { "name": "Agilus Work Solutions", "href": "https://www.agilus.ca/job-seekers/" },
+  { "name": "Algonquin College", "href": "https://www.algonquincollege.com/" },
+  { "name": "Boccia Canada", "href": "https://bocciacanada.ca/en/" },
+  { "name": "Canadian Museum of History", "href": "https://www.historymuseum.ca/" },
+  { "name": "Health Canada", "href": "https://www.canada.ca/en/health-canada/services/consumer-product-safety/pesticides-pest-management/registrants-applicants.html" },
   { "name": "Hintonburg Community Association", "href": "" },
-  { "name": "Industry Canada", "href": "" },
-  { "name": "National Capital Commission", "href": "" },
-  { "name": "National Gallery of Canada", "href": "" },
-  { "name": "Natural Resources Canada", "href": "" },
-  { "name": "Ottawa Fringe Festival", "href": "" },
-  { "name": "Scooteretti", "href": "" }
+  { "name": "OntarioMD", "href": "https://www.ontariomd.ca/" },
+  { "name": "National Capital Commission", "href": "https://ncc-ccn.gc.ca/" },
+  { "name": "National Gallery of Canada", "href": "https://www.gallery.ca/" },
+  { "name": "Natural Resources Canada", "href": "https://geo.ca/home/" },
+  { "name": "Ottawa Fringe Festival", "href": "https://ottawafringe.com/" },
+  { "name": "Scooteretti", "href": "https://scooteretti.com/" }
 ]

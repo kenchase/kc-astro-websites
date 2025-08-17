@@ -218,6 +218,7 @@ caption {
   margin-block-start: var(--space-s);
 }
 
+a:not([class]),
 a:not([class]):hover {
   text-underline-offset: 0.2lh;
 }
